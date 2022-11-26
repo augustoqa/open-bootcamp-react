@@ -7,10 +7,10 @@ import { MiComponenteConContexto } from './hooks/Ejemplo3'
 function App() {
   return (
     <div className='App'>
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
       {/* <Ejemplo1></Ejemplo1> */}
       {/* <Ejemplo2></Ejemplo2> */}
-      <MiComponenteConContexto></MiComponenteConContexto>
+      {/* <MiComponenteConContexto></MiComponenteConContexto> */}
     </div>
   )
 }
