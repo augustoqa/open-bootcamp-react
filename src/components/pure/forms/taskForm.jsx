@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { LEVELS } from '../../../models/levels.enum'
 import { Task } from '../../../models/task.class'
 
-const TaskForm = ({ add }) => {
+const TaskForm = ({ add, length }) => {
   const nameRef = useRef('')
   const descriptionRef = useRef('')
   const levelRef = useRef(LEVELS.NORMAL)
@@ -44,9 +44,6 @@ const TaskForm = ({ add }) => {
           required
           placeholder='Task description'
         />
-        <label htmlFor='selectLevel' className='sr-only'>
-          Priority
-        </label>
         <select
           ref={levelRef}
           defaultValue={LEVELS.NORMAL}
@@ -57,16 +54,17 @@ const TaskForm = ({ add }) => {
           <option value={LEVELS.URGENT}>Urgent</option>
           <option value={LEVELS.BLOCKING}>Blocking</option>
         </select>
+        <button type='submit' className='btn btn-success btn-lg ms-2'>
+          {length > 0 ? 'Add New Task' : 'Create Your First Task'}
+        </button>
       </div>
-      <button type='submit' className='btn btn-success btn-lg ms-2'>
-        Add
-      </button>
     </form>
   )
 }
 
 TaskForm.propTypes = {
   add: PropTypes.func.isRequired,
+  length: PropTypes.number.isRequired,
 }
 
 export default TaskForm
