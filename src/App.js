@@ -11,13 +11,13 @@ function App() {
   return (
     <div className='App'>
       {/* <Father></Father> */}
-      {/* <TaskListComponent></TaskListComponent> */}
+      <TaskListComponent></TaskListComponent>
       {/* <Ejemplo1></Ejemplo1> */}
       {/* <Ejemplo2></Ejemplo2> */}
       {/* <MiComponenteConContexto></MiComponenteConContexto> */}
       {/* Ejemplo de uso de Formik y Yup */}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
     </div>
   )
 }

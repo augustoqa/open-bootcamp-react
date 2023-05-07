@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { LEVELS } from '../../models/levels.enum'
 import { Task } from '../../models/task.class'
-import TaskForm from '../pure/forms/taskForm'
+// import TaskForm from '../pure/forms/taskForm'
+import TaskFormik from '../pure/forms/taskFormik'
 import TaskComponent from '../pure/task'
 
 const TaskListComponent = () => {
@@ -101,7 +102,8 @@ const TaskListComponent = () => {
             )}
           </div>
         </div>
-        <TaskForm add={addTask} length={tasks.length}></TaskForm>
+        {/* <TaskForm add={addTask} length={tasks.length}></TaskForm> */}
+        <TaskFormik add={addTask} length={tasks.length}></TaskFormik>
       </div>
     </div>
   )
